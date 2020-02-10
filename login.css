@@ -1,0 +1,135 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.text_style{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    color:#fff;
+}
+
+body {
+  float: left;
+  margin: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+#logo {
+  width: 10%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.full_cover {
+  background: linear-gradient(135deg, #a54997 0%, #022e93 100%);
+  opacity: 0.8;
+  background-image: url("../background1.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.header {
+  width: 100%;
+  height: 10%;
+  background-color: #010161;
+}
+
+.body_container {
+  width: 100%;
+  height: 90%;
+  align-items: center;
+  display: flex;
+  justify-content: center
+}
+
+
+.header_left {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.header_right {
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+
+
+.ul_header {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+}
+.header_button{
+    height: 5%;
+    background: #FFD;
+    box-shadow: 3px 3px 4px cadetblue;
+    border-radius: 5px;
+}
+.login_container {
+  height: 330px;
+  width: 500px;
+  background: #283f75cf;
+  box-shadow: 4px 4px 8px gray;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  padding: 15px;
+  margin: auto;
+}
+
+.login_header {
+  width: 100%;
+  height:10%;
+  padding: 1px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_content {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+}
+.ul_login{
+    list-style-type: none;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+.login_input1{
+    height: 5%;
+    background: #FFD;
+    box-shadow: 3px 3px 4px cadetblue;
+    border-radius: 5px;
+    width: 50%;
+    
+}
+.login_input{
+margin-bottom:10px;
+}
+#ul_header {
+  text-decoration: underline;
+  
+}
+#login_label{
+    text-align: left;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+#login_button{
+    background: #FFD;
+    box-shadow: 3px 3px 4px cadetblue;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 50%;
+    
+}

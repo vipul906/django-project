@@ -1,0 +1,88 @@
+function signin(){
+    var username = $('#user').val();
+    var password = $('#pwd').val();    
+    if (!username){
+       alert ('please fill user input');
+       return
+    }
+    if (!password){
+       alert ('please fill password input');
+       return  
+    }
+    
+    var patt = /[^A-Za-z0-9]/g;
+    var result = username.match(patt);
+    if (result){
+        alert("fill according to requirement\nAtleast 8 Character with including lowercase,uppercase,number");
+        return
+    }
+    console.log(username);
+    console.log(password);
+
+    $.ajax({
+        url: '../../../cgi-bin/vipul/login.py',
+        type: 'POST',
+        data: {user: username, pwd: password, 'login': 'signin'},
+        success: function(result){
+                    alert(result);
+        },
+        error: function(error){
+                   alert(error.statusText);
+                },        
+     });
+  }
+
+function create_signup(){
+    $("ul.ul_login li:eq(2)").after('<li><p id="login_label"><label for="email">Email</label></p></li><li class="login_input"><input type="email" id="email" class="login_input1" placeholder="Email"></li>');
+    $("#ul_header").hide();
+   
+    $("#login_button")[0].textContent = "Sign up";
+    function signup(){
+    var email = $('#email').val();     
+    var username = $('#user').val();
+    
+    var password = $('#pwd').val();    
+    if (!username){
+       alert ('please fill user input');
+       return
+    }
+    if (!password){
+       alert ('please fill password input');
+       return  
+    }
+    
+    var patt = /[^A-Za-z0-9]/g;
+    var result = username.match(patt);
+    if (result){
+        alert("fill according to requirement.\nAtleast 8 Character with including lowercase,uppercase,number")
+        return
+    }
+    console.log(username);
+    console.log(password);
+
+    $.ajax({
+        url: '../../../cgi-bin/vipul/login.py',
+        type: 'POST',
+        data: {user:username,pwd:password,'login':'signup'},
+        success: function(result){
+                    asdd = result
+                    alert(asdd);
+        },
+        error: function(error){
+                   alert(error.statusText);
+              },        
+    });
+}
+ }
+function myFunction() {
+  var txt;
+  console.log('sdd')
+  var person =prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    txt = "User cancelled the prompt.";
+  }
+  else {
+    txt = "Hello " + person + "! How are you today?";
+  }
+  $(".ul_login li:eq(2)").append('<li class="login_input"><input type="text" id="email" class="login_input1" placeholder="Email"></li>');
+}
